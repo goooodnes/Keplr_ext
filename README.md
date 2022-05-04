@@ -1,4 +1,4 @@
-## Cosmic Horizont darkenergy-1 keplr wallet integration
+## Cosmic Horizon darkenergy-1 keplr wallet integration
 <!--
 #### Requirements 
 [keplr wallet extension](https://google.com)
@@ -20,7 +20,7 @@ Open the developer console:
 ```markdown
 await window.keplr.experimentalSuggestChain({
     chainId: "darkenergy-1",
-    chainName: "COHO",
+    chainName: "Cosmic Horizon",
     rpc: "http://195.3.221.12:26557", // replace with your rpc url
     rest: "http://195.3.221.12:1517", // replace with your rest api url
     bip44: {
