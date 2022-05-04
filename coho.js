@@ -42,8 +42,8 @@ window.onload = async () => {
     },
     coinType: 118,
     gasPriceStep: {
-        low: 0.01,
-        average: 0.025,
+        low: 0.03,
+        average: 0.03,
         high: 0.03,
     },
 });
