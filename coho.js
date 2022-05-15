@@ -5,8 +5,8 @@ window.onload = async () => {
     await window.keplr.experimentalSuggestChain({
     chainId: "darkenergy-1",
     chainName: "Cosmic Horizon",
-    rpc: "http://195.3.221.12:26557", // replace with your rpc url
-    rest: "http://195.3.221.12:1517", // replace with your rest api url
+    rpc: "http://195.201.106.36:26557", // replace with your rpc url
+    rest: "http://195.201.106.36:1517", // replace with your rest api url
     bip44: {
         coinType: 118,
     },
@@ -48,7 +48,7 @@ window.onload = async () => {
     },  
         features: [
         "cosmwasm", "ibc-transfer", "ibc-go", "wasmd_0.24+"
-    ]},
+    ],
     
 });
 }
