@@ -6,7 +6,7 @@ window.onload = async () => {
     chainId: "atlantic-1",
     chainName: "Sei-Testnet",
     rpc: "http://138.201.136.49:26657", // replace with your rpc url
-    rest: "http://138.201.136.49:1517", // replace with your rest api url
+    rest: "http://138.201.136.49:1317", // replace with your rest api url
     bip44: {
         coinType: 118,
     },
