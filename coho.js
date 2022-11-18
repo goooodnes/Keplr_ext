@@ -3,42 +3,42 @@ window.onload = async () => {
         alert("Please install keplr extension");
     } else 
     await window.keplr.experimentalSuggestChain({
-    chainId: "darkenergy-1",
-    chainName: "Cosmic Horizon",
-    rpc: "http://195.201.106.36:26557", // replace with your rpc url
-    rest: "http://195.201.106.36:1517", // replace with your rest api url
+    chainId: "atlantic-1",
+    chainName: "Sei-Testnet",
+    rpc: "http://138.201.136.49:26557", // replace with your rpc url
+    rest: "http://138.201.136.49:1517", // replace with your rest api url
     bip44: {
         coinType: 118,
     },
     bech32Config: {
-        bech32PrefixAccAddr: "coho",
-        bech32PrefixAccPub: "coho" + "pub",
-        bech32PrefixValAddr: "coho" + "valoper",
-        bech32PrefixValPub: "coho" + "valoperpub",
-        bech32PrefixConsAddr: "coho" + "valcons",
-        bech32PrefixConsPub: "coho" + "valconspub",
+        bech32PrefixAccAddr: "sei",
+        bech32PrefixAccPub: "sei" + "pub",
+        bech32PrefixValAddr: "sei" + "valoper",
+        bech32PrefixValPub: "sei" + "valoperpub",
+        bech32PrefixConsAddr: "sei" + "valcons",
+        bech32PrefixConsPub: "sei" + "valconspub",
     },
     currencies: [ 
         { 
-            coinDenom: "COHO", 
-            coinMinimalDenom: "ucoho", 
+            coinDenom: "SEI", 
+            coinMinimalDenom: "usei", 
             coinDecimals: 6, 
-            coinGeckoId: "coho", 
+            coinGeckoId: "sei", 
         }, 
     ],
     feeCurrencies: [
         {
-            coinDenom: "COHO",
-            coinMinimalDenom: "ucoho",
+            coinDenom: "SEI",
+            coinMinimalDenom: "usei",
             coinDecimals: 6,
-            coinGeckoId: "coho",
+            coinGeckoId: "sei",
         },
     ],
     stakeCurrency: {
-        coinDenom: "COHO",
-        coinMinimalDenom: "ucoho",
+        coinDenom: "SEI",
+        coinMinimalDenom: "usei",
         coinDecimals: 6,
-        coinGeckoId: "coho",
+        coinGeckoId: "sei",
     },
     coinType: 118,
     gasPriceStep: {
