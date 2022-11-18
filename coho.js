@@ -42,9 +42,9 @@ window.onload = async () => {
     },
     coinType: 118,
     gasPriceStep: {
-        low: 0.03,
-        average: 0.03,
-        high: 0.03,
+        low: 0.003,
+        average: 0.003,
+        high: 0.003,
     },  
         features: [
         "cosmwasm", "ibc-transfer", "ibc-go", "wasmd_0.24+"
