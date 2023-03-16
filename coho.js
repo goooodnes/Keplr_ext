@@ -3,52 +3,85 @@ window.onload = async () => {
         alert("Please install keplr extension");
     } else 
     await window.keplr.experimentalSuggestChain({
-    chainId: "atlantic-2",
-    chainName: "Sei-Testnet",
-    rpc: "https://sei-testnet-2-rpc-2.brocha.in", // replace with your rpc url
-    rest: "https://sei-testnet-2-rest-2.brocha.in", // replace with your rest api url
-    bip44: {
-        coinType: 118,
+   "chainId": "atlantic-2",
+  "chainName": "Sei atlantic-2-test",
+  "rpc": "https://sei-testnet-2-rpc-2.brocha.in/",
+  "rest": "https://sei-testnet-2-rest-2.brocha.in",
+  "bip44": {
+    "coinType": 118
+  },
+  "bech32Config": {
+    "bech32PrefixAccAddr": "sei",
+    "bech32PrefixAccPub": "seipub",
+    "bech32PrefixValAddr": "seivaloper",
+    "bech32PrefixValPub": "seivaloperpub",
+    "bech32PrefixConsAddr": "seivalcons",
+    "bech32PrefixConsPub": "seivalconspub"
+  },
+  "currencies": [
+    {
+      "coinDenom": "SEI",
+      "coinMinimalDenom": "usei",
+      "coinDecimals": 6
     },
-    bech32Config: {
-        bech32PrefixAccAddr: "sei",
-        bech32PrefixAccPub: "sei" + "pub",
-        bech32PrefixValAddr: "sei" + "valoper",
-        bech32PrefixValPub: "sei" + "valoperpub",
-        bech32PrefixConsAddr: "sei" + "valcons",
-        bech32PrefixConsPub: "sei" + "valconspub",
+    {
+      "coinDenom": "USDC",
+      "coinMinimalDenom": "uusdc",
+      "coinDecimals": 6,
+      "coinGeckoId": "usd-coin"
     },
-    currencies: [ 
-        { 
-            coinDenom: "SEI", 
-            coinMinimalDenom: "usei", 
-            coinDecimals: 6, 
-            coinGeckoId: "sei", 
-        }, 
-    ],
-    feeCurrencies: [
-        {
-            coinDenom: "SEI",
-            coinMinimalDenom: "usei",
-            coinDecimals: 6,
-            coinGeckoId: "sei",
-        },
-    ],
-    stakeCurrency: {
-        coinDenom: "SEI",
-        coinMinimalDenom: "usei",
-        coinDecimals: 6,
-        coinGeckoId: "sei",
+    {
+      "coinDenom": "ATOM",
+      "coinMinimalDenom": "uatom",
+      "coinDecimals": 6,
+      "coinGeckoId": "cosmos"
     },
-    coinType: 118,
-    gasPriceStep: {
-		low: 0.01,
-		average: 0.025,
-		high: 0.03
-    },  
-        features: [
-        "cosmwasm", "ibc-transfer", "ibc-go", "wasmd_0.24+"
-    ],
-    
+    {
+      "coinDenom": "WETH",
+      "coinMinimalDenom": "ibc/C2A89D98873BB55B62CE86700DFACA646EC80352E8D03CC6CF34DD44E46DC75D",
+      "coinDecimals": 18,
+      "coinGeckoId": "weth"
+    },
+    {
+      "coinDenom": "WBTC",
+      "coinMinimalDenom": "ibc/42BCC21A2B784E813F8878739FD32B4AA2D0A68CAD94F4C88B9EA98609AB0CCD",
+      "coinDecimals": 8,
+      "coinGeckoId": "bitcoin"
+    },
+    {
+      "coinDenom": "aUSDC",
+      "coinMinimalDenom": "ibc/6D45A5CD1AADE4B527E459025AC1A5AEF41AE99091EF3069F3FEAACAFCECCD21",
+      "coinDecimals": 6,
+      "coinGeckoId": "usd-coin"
+    },
+    {
+      "coinDenom": "UST2",
+      "coinMinimalDenom": "factory/sei1466nf3zuxpya8q9emxukd7vftaf6h4psr0a07srl5zw74zh84yjqpeheyc/uust2",
+      "coinDecimals": 6
+    },
+    {
+      "coinDenom": "uCeler",
+      "coinMinimalDenom": "factory/sei174t9p63nzlmsycmd9x9zxx3ejq9lp2y9f69rp9/uceler",
+      "coinDecimals": 6
+    }
+  ],
+  "feeCurrencies": [
+    {
+      "coinDenom": "SEI",
+      "coinMinimalDenom": "usei",
+      "coinDecimals": 6
+    }
+  ],
+  "stakeCurrency": {
+    "coinDenom": "SEI",
+    "coinMinimalDenom": "usei",
+    "coinDecimals": 6
+  },
+  "coinType": 118,
+  "features": [
+    "stargate",
+    "ibc-transfer",
+    "cosmwasm"
+  ],
+  "beta": true
 });
-}
