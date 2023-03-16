@@ -3,10 +3,10 @@ window.onload = async () => {
         alert("Please install keplr extension");
     } else 
     await window.keplr.experimentalSuggestChain({
-    chainId: "atlantic-1",
+    chainId: "atlantic-2",
     chainName: "Sei-Testnet",
-    rpc: "http://138.201.136.49:26657", // replace with your rpc url
-    rest: "http://138.201.136.49:1317", // replace with your rest api url
+    rpc: "https://sei-testnet-2-rpc-2.brocha.in", // replace with your rpc url
+    rest: "https://sei-testnet-2-rest-2.brocha.in", // replace with your rest api url
     bip44: {
         coinType: 118,
     },
@@ -42,9 +42,9 @@ window.onload = async () => {
     },
     coinType: 118,
     gasPriceStep: {
-        low: 0.003,
-        average: 0.003,
-        high: 0.003,
+		low: 0.01,
+		average: 0.025,
+		high: 0.03
     },  
         features: [
         "cosmwasm", "ibc-transfer", "ibc-go", "wasmd_0.24+"
